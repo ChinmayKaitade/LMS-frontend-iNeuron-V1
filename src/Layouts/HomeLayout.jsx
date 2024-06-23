@@ -50,7 +50,7 @@ function HomeLayout({ children }) {
         </div>
         <div className="drawer-side w-0">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-48 sm:w-80 bg-base-200 text-base-content relative">
+          <ul className="menu p-4 w-48 h-[100%] sm:w-80 bg-base-200 text-base-content relative">
             <li className="w-fit absolute right-2 z-50">
               <button onClick={hideDrawer}>
                 <AiFillCloseCircle size={24} />
@@ -81,11 +81,11 @@ function HomeLayout({ children }) {
             {!isLoggedIn && (
               <li className="absolute bottom-4 w-[90%]">
                 <div className="w-full flex items-center justify-center">
-                  <button className="btn-primary px-4 py-1 font-semibold rounded-md">
-                    <Link to="/login">LogIn</Link>
+                  <button className="button-primary px-4 py-1 font-semibold rounded-md">
+                    <Link to="/login">Login</Link>
                   </button>
 
-                  <button className="btn-secondary px-4 py-1 font-semibold rounded-md">
+                  <button className="button-secondary px-4 py-1 font-semibold rounded-md">
                     <Link to="/signup">Signup</Link>
                   </button>
                 </div>
@@ -95,11 +95,11 @@ function HomeLayout({ children }) {
             {isLoggedIn && (
               <li className="absolute bottom-4 w-[90%]">
                 <div className="w-full flex items-center justify-center">
-                  <button className="btn-primary px-4 py-1 font-semibold rounded-md">
+                  <button className="button-primary px-4 py-1 font-semibold rounded-md">
                     <Link to="/user/profile">Profile</Link>
                   </button>
 
-                  <button className="btn-secondary px-4 py-1 font-semibold rounded-md">
+                  <button className="button-secondary px-4 py-1 font-semibold rounded-md">
                     <Link onClick={handleLogout}>Logout</Link>
                   </button>
                 </div>
